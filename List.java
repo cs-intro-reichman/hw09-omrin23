@@ -142,7 +142,7 @@ public class List {
                     return current.cp;
                 }
                 current = current.next;
-                index++;
+                i++;
             }
 
             return null;
