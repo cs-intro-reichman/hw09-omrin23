@@ -130,23 +130,22 @@ public class List {
      *  If the index is negative or is greater than the size of this list, 
      *  throws an IndexOutOfBoundsException. */
     public CharData get(int index) {
-        if (index < 0 || index >= this.size) {
+        if (index < 0 || index > this.size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
         else {
             Node current = this.first;
             int i = 0;
-            CharData c = null;
 
             while (current != null) {
                 if (i == index) {
-                    c = current.cp;
+                    return current.cp;
                 }
                 current = current.next;
                 index++;
             }
 
-            return c;
+            return null;
         }
     }
 
